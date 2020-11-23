@@ -1,6 +1,6 @@
 
 
-<form [formGroup]="form" #formDirective="ngForm">
+<form [formGroup]="form">
     <div  fxLayout="column">
 
     <mat-form-field>
@@ -17,9 +17,9 @@
     </mat-form-field>
    
 </div>
+
+</form>
+<button mat-button (click)="reset()">Clear</button>
 <button mat-raised-button color="primary" (click)="updateItem()">Update</button>
-<button mat-button (click)="reset(formDirective)">Clear</button>
 <button mat-raised-button color="warn" (click)="addItem()"> Add </button>
 <button mat-raised-button color="accent" (click)="deleteItem()"> Delete </button>
-</form>
-
