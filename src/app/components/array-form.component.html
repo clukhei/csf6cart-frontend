@@ -1,0 +1,40 @@
+<p>array-form works!</p>
+<h1>To buy list</h1>
+<button mat-raised-button color="primary" (click)="addToBuy()">
+  Add to Buy
+</button>
+<form [formGroup]="toBuyForm">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Brand</th>
+      <th>Bought?</th>
+    </tr>
+  </thead>
+  <tbody formArrayName="toBuys">
+    <tr *ngFor="let toBuy of toBuyArray.controls" [formGroup]="toBuy">
+      <td>
+        <mat-form-field>
+          <input matInput type="text" formControlName="item" />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput type="text" formControlName="quantity" />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput type="text" formControlName="brand" />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-checkbox formControlName="bought" value="true"
+          >
+        </mat-checkbox>
+      </td>
+    </tr>
+  </tbody>
+</form>
+

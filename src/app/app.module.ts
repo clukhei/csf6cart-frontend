@@ -12,7 +12,9 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatButtonModule } from '@angular/material/button'
 import { MatInputModule } from '@angular/material/input'
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {CartService} from './cart.service'
+import {CartService} from './cart.service';
+import { ArrayFormComponent } from './components/array-form.component'
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
@@ -21,7 +23,8 @@ import {CartService} from './cart.service'
   declarations: [
     AppComponent,
     ItemlistComponent,
-    ItemdetailComponent
+    ItemdetailComponent,
+    ArrayFormComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import {CartService} from './cart.service'
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCheckboxModule
   ],
   providers: [CartService],
   bootstrap: [AppComponent]
