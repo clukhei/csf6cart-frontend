@@ -1,0 +1,13 @@
+<!-- <p>itemlist works!</p>
+<ul *ngFor="let d of data">
+  <li>{{ d.id }}</li>
+  <li>{{ d.item }}</li>
+  <li>{{ d.quantity }}</li>
+  <button (click)="sendId(d.id)">see details</button>
+</ul>
+ -->
+
+ <div *ngFor ="let d of data" class="item-class" (click)="sendId(d.id)">
+    {{d.item}}
+
+ </div>

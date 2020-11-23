@@ -1,0 +1,25 @@
+
+
+<form [formGroup]="form" #formDirective="ngForm">
+    <div  fxLayout="column">
+
+    <mat-form-field>
+        <mat-label>Id</mat-label>
+        <input matInput formControlName ="id" type="text">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Item Name</mat-label>
+        <input matInput formControlName ="item" type="text">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Quantity</mat-label>
+        <input matInput formControlName ="quantity" type="number" />
+    </mat-form-field>
+   
+</div>
+<button mat-raised-button color="primary" (click)="updateItem()">Update</button>
+<button mat-button (click)="reset(formDirective)">Clear</button>
+<button mat-raised-button color="warn" (click)="addItem()"> Add </button>
+<button mat-raised-button color="accent" (click)="deleteItem()"> Delete </button>
+</form>
+
